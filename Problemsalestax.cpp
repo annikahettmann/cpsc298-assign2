@@ -2,7 +2,8 @@
 using namespace std;
 
 float addTax(float taxRate, float cost){
-  cost = cost * taxRate * 1.0f; //calculates cost with sales tax added
+  taxRate += 1.0f; //adds 1.00 to sales tax to simplify math
+  cost = cost * taxRate; //calculates cost with sales tax added
   return cost; //returns new cost value
 }
 int main() { //method implementation
